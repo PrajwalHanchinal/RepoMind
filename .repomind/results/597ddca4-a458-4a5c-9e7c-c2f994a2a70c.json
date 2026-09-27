@@ -1,0 +1,25 @@
+{
+  "runId": "597ddca4-a458-4a5c-9e7c-c2f994a2a70c",
+  "sessionId": "9320d5fb-99c8-488f-ad00-2fce64075079",
+  "repoPath": "E:\\Repomind\\task-api",
+  "verdict": "pass",
+  "commands": [
+    {
+      "command": "npm run build",
+      "stdout": "\n> task-api@1.0.0 build\n> tsc\n\n",
+      "stderr": "",
+      "exitCode": 0,
+      "durationMs": 1412
+    },
+    {
+      "command": "npm test",
+      "stdout": "\n> task-api@1.0.0 test\n> jest --forceExit\n\n",
+      "stderr": "PASS tests/task.test.ts\n  GET /tasks\n    √ returns an empty array when no tasks exist (60 ms)\n    √ returns all created tasks (17 ms)\n  POST /tasks\n    √ creates a task with required title (3 ms)\n    √ creates a task with a custom status (2 ms)\n    √ returns 400 when title is missing (2 ms)\n    √ returns 400 when title is an empty string (2 ms)\n    √ assigns incrementing ids across multiple creates (5 ms)\n  GET /tasks/:id\n    √ returns the correct task by id (4 ms)\n    √ returns 404 for a non-existent id (2 ms)\n  DELETE /tasks/:id\n    √ deletes an existing task and returns 204 (5 ms)\n    √ returns 404 when deleting a non-existent task (1 ms)\n    √ does not affect other tasks when one is deleted (7 ms)\n\nTest Suites: 1 passed, 1 total\nTests:       12 passed, 12 total\nSnapshots:   0 total\nTime:        1.294 s, estimated 2 s\nRan all test suites.\nForce exiting Jest: Have you considered using `--detectOpenHandles` to detect async operations that kept running after all tests finished?\n",
+      "exitCode": 0,
+      "durationMs": 7353
+    }
+  ],
+  "startedAt": "2026-09-26T07:03:43.993Z",
+  "completedAt": "2026-09-26T07:03:52.758Z",
+  "totalDurationMs": 8765
+}

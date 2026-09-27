@@ -1,0 +1,7 @@
+{
+  "/api/analyse/route": "app/api/analyse/route.js",
+  "/api/impact/route": "app/api/impact/route.js",
+  "/api/task/route": "app/api/task/route.js",
+  "/api/verify/route": "app/api/verify/route.js",
+  "/page": "app/page.js"
+}

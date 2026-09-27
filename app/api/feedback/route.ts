@@ -3,6 +3,7 @@ import { generateFeedback } from '@/lib/feedback';
 import { getSession } from '@/lib/store';
 import { getResult } from '@/lib/store';
 import { DEMO_REPO_PATH } from '@/lib/config';
+import { runBobFeedback } from '@/lib/bob';
 
 // ---------------------------------------------------------------------------
 // POST /api/feedback
@@ -92,8 +93,14 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
     );
   }
 
+  const bobResult = await runBobFeedback(DEMO_REPO_PATH);
+
   return NextResponse.json({
     feedback: result.feedback,
     feedbackMdPath: result.feedbackMdPath,
+    bob: {
+      success: bobResult.success,
+      output: bobResult.output,
+    },
   });
 }
